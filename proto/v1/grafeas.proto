@@ -34,6 +34,7 @@ import "proto/v1/common.proto";
 import "proto/v1/deployment.proto";
 import "proto/v1/discovery.proto";
 import "proto/v1/image.proto";
+import "proto/v1/intoto.proto";
 import "proto/v1/package.proto";
 import "proto/v1/upgrade.proto";
 import "proto/v1/vulnerability.proto";
@@ -236,6 +237,8 @@ message Occurrence {
     grafeas.v1.AttestationOccurrence attestation = 14;
     // Describes an available package upgrade on the linked resource.
     grafeas.v1.UpgradeOccurrence upgrade = 15;
+    // Describes an in-toto link attestation.
+    grafeas.v1.InTotoOccurrence intoto = 16;
 
   }
 }
@@ -296,6 +299,8 @@ message Note {
     grafeas.v1.AttestationNote attestation = 16;
     // A note describing available package upgrades.
     grafeas.v1.UpgradeNote upgrade = 17;
+    // A note describing an in-toto link.
+    grafeas.v1.InTotoNote intoto = 18;
   }
 }
 

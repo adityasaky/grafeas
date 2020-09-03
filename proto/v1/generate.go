@@ -28,4 +28,6 @@
 //go:generate mv vulnerability.pb.go grafeas_go_proto
 //go:generate protoc upgrade.proto
 //go:generate mv upgrade.pb.go grafeas_go_proto
+//go:generate protoc intoto.proto
+//go:generate mv intoto.pb.go grafeas_go_proto
 package v1
